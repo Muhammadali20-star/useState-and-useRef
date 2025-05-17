@@ -32,7 +32,7 @@ const Header = () => {
     SetText(text.filter((person) => person.id !== id))
   }
   return (
-    <div className="w-full container max-w-[1550px] mx-auto bg-gradient-to-br from-blue-300 to-purple-500 pt-20">
+    <div className="w-full container max-w-[1550px] mx-auto bg-gradient-to-r from-[#38bdf8] via-[#2563eb] to-[#d946ef] pt-20">
        <div className='w-[600px] h-[600px] bg-white rounded-[15px]  mx-auto p-6 flex flex-col gap-4 mb-10'>
          <h1 className='text-black-600 font-bold'><span className='relative  font-bold after:absolute after:left-0 after:-bottom-1 after:w-full after:h-1 after:rounded-[8px] after:bg-gradient-to-br after:from-blue-300 after:to-purple-500'>Re</span>gistration</h1>
         <form onSubmit={handlOnSubmit} className='grid grid-cols-2 gap-4 bg-black-200' action="">
@@ -75,7 +75,7 @@ const Header = () => {
        <div className='container mx-auto grid grid-cols-3 gap-4'>
              {
               text?.map((person) => (
-                    <div key={person.id} className='h-[300px] w-[350px] bg-white p-4 rounded-[10px] flex flex-col gap-4 mb-10'>
+                    <div key={person.id} className='h-[300px] w-[350px] bg-white p-4  rounded-[10px] flex flex-col gap-4 mb-10' style={{boxShadow: '0 4px 10px rgba(10, 1, 1, 0.5)'}}>
                       <img className='w-[100px] h-[100px] mx-auto' src="https://avatars.mds.yandex.net/i?id=b1a9186b677389bc008decb6ff94310c5f4cc60a-8482868-images-thumbs&n=13" alt="" />
                       <div className='flex flex-col'>
                       <p><span className='font-bold'>ID:</span> {person.id}</p>
